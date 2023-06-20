@@ -47,11 +47,11 @@ function InsertModal(props) {
 
     const insertTable = () => {
         settableName(document.getElementById("select").value);
-        document.getElementById("Batters").style.display = tableName=="Batters"?"block":"none";
-        document.getElementById("Bowlers").style.display = tableName=="Bowlers"?"block":"none";
-        document.getElementById("Players").style.display = tableName=="Players"?"block":"none";
-        document.getElementById("Teams").style.display = tableName=="Teams"?"block":"none";
-        document.getElementById("Balls").style.display = tableName=="Balls"?"block":"none";
+        document.getElementById("Batters").style.display = tableName==="Batters"?"block":"none";
+        document.getElementById("Bowlers").style.display = tableName==="Bowlers"?"block":"none";
+        document.getElementById("Players").style.display = tableName==="Players"?"block":"none";
+        document.getElementById("Teams").style.display = tableName==="Teams"?"block":"none";
+        document.getElementById("Balls").style.display = tableName==="Balls"?"block":"none";
 
     }
     const insertValues = () => {

@@ -33,7 +33,7 @@ const RunsBB = () => {
 
   },[PlayerList]);
     return (<>
-      <div className="Features-font"><p>This Feature will let you know about the batsmen who scored most runs against a particular bowler .</p>
+      <div className="container mx-5 my-5"><p>This Feature will let you know about the batsmen who scored most runs against a particular bowler .</p>
           <span>Enter the the name of bowler:</span>
           <input type="text" className="input" name="bowlerName"  onChange={(e) => {
               setBowler(e.target.value);
@@ -48,10 +48,10 @@ const RunsBB = () => {
           <br></br>
           <br></br>
       </div>
-      <div className="flex-card" id="flex-card">
+      <div className="row g-5 mx-5 my-5" id="flex-card">
           {
               PlayerList.map((item) => (
-                  <Card key={item.batterid} style={{ width: '20rem' }}>
+                  <Card key={item.batterid} style={{ width: '20rem' }} className='col-lg-3 col-md-6 mx-3'>
                       <Card.Img variant="top" src={item.img} />
                       <Card.Body>
                           <Card.Title>{item.name}</Card.Title>

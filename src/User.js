@@ -6,6 +6,7 @@ import WicketsBB from "./pages/WicketsBB";
 import RunsBB from "./pages/RunsBB";
 import NoPage from "./pages/NoPage";
 import MaxRuns from "./pages/MaxRuns";
+import Ml from "./pages/Ml";
 function User()
 {
 
@@ -19,6 +20,7 @@ function User()
           <Route path="/wicketsBB" element={<WicketsBB />} />
           <Route path="/runsBB" element={<RunsBB />} />
           <Route path="/MaxRuns" element={<MaxRuns/>} />
+          <Route path="/mlmode" element={<Ml />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

@@ -17,6 +17,7 @@ const Layout = () => {
           <h5 className="nav-ele"><Link className="hello" to="/MostWickets">Most Wickets</Link></h5>
           <h5 className="nav-ele"><Link className="hello" to="/wicketsBB">Wickets(By Batsman)</Link></h5>
           <h5 className="nav-ele"><Link className="hello" to="/runsBB">Runs(By Bowler)</Link></h5>
+          <h5 className="nav-ele"><Link className="hello" to="/mlmode">Price Prediction</Link></h5>
           
           
           {/* </Nav> */}

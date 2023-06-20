@@ -33,7 +33,7 @@ const WicketsBB = () => {
 
   },[PlayerList]);
     return (<>
-      <div className="Features-font"><p>This Feature will let you know about the bowlers who took wicket of a particular batsman most number of times.</p>
+      <div className="container mx-5 my-5"><p>This Feature will let you know about the bowlers who took wicket of a particular batsman most number of times.</p>
           <span>Enter the the name of batsman:</span>
           <input type="text" className="input" name="batsmanName"  onChange={(e) => {
               setBatsman(e.target.value);
@@ -48,10 +48,10 @@ const WicketsBB = () => {
           <br></br>
           <br></br>
       </div>
-      <div className="flex-card" id="flex-card">
+      <div className="row g-5 mx-5 my-5" id="flex-card">
           {
               PlayerList.map((item) => (
-                  <Card key={item.bowlerid} style={{ width: '20rem' }}>
+                  <Card key={item.bowlerid} style={{ width: '20rem' }} className='col-lg-3 col-md-6 mx-3'>
                       <Card.Img variant="top" src={item.img} />
                       <Card.Body>
                           <Card.Title>{item.name}</Card.Title>

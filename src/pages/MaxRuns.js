@@ -33,7 +33,7 @@ const MaxRuns = () => {
     },[PlayerList]);
     return (
         <>
-            <div className="Features-font"><p>This Feature will let you know about the top scorers of the tournament.</p>
+            <div className="container mx-5 my-5"><p>This Feature will let you know about the top scorers of the tournament.</p>
                 <p>Enter the the number of run scorers you want:</p>
                 <input type="text" className="input" name="number"  onChange={(e) => {
                     setNumberofscorers(e.target.value);
@@ -44,10 +44,10 @@ const MaxRuns = () => {
                 <br></br>
                 <br></br>
             </div>
-            <div className="flex-card" id="flex-card">
+            <div className="row g-5 px-5" id="flex-card">
                 {
                     PlayerList.map((item) => (
-                        <Card key={item.batterid} style={{ width: '20rem' }}>
+                        <Card key={item.batterid} style={{ width: '20rem' }} className='col-lg-3 col-md-6 mx-3'>
                             <Card.Img variant="top" src={item.img} />
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>

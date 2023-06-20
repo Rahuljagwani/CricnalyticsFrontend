@@ -62,17 +62,19 @@ const Admin = () => {
   const renderForm = (
     <div className="form">
       <form onSubmit={handleSubmit}>
-        <div className="input-container">
-          <label>Username </label>
+        <div className="container">
+          <label>Username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
           <input type="text" name="uname" required />
           {renderErrorMessage("uname")}
         </div>
-        <div className="input-container">
-          <label>Password </label>
+        <br></br>
+        <div className="container">
+          <label>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <input type="password" name="pass" required />
           {renderErrorMessage("pass")}
         </div>
-        <div className="button-container">
+        <br></br>
+        <div className="container">
           <input type="submit" value="Login" />
         </div>
       </form>
@@ -81,39 +83,40 @@ const Admin = () => {
 
   return (
     <><Button onClick={() => window.location.reload(false)}>Back to Main page</Button>
-      <div className="app">
-        <div className="login-form">
-          <div className="title" id="title">Sign In</div>
-          {isSubmitted ?
+
+      <div className="bg-info container shadow-lg rounded w-50 px-5 py-5 mt-5">
+        <h4 className="title mx-4" id="title">Sign In</h4>
+        <br></br>
+        {isSubmitted ?
 
 
-            <>
-              <h5>Choose operation to be performed on Tables:</h5>
-              <ButtonGroup vertical>
-                <Button variant="warning" size="lg" onClick={() => setInsertModalShow(true)}>Insert values</Button>
-                <InsertModal
-                  show={InsertmodalShow}
-                  onHide={() => setInsertModalShow(false)}
-                />
-                <br></br>
-                <Button variant="warning" size="lg" onClick={() => setDeleteModalShow(true)}>Delete values</Button>
-                <DeleteModal
-                  show={DeletemodalShow}
-                  onHide={() => setDeleteModalShow(false)}
-                />
-                <br></br>
-                <Button variant="warning" size="lg" onClick={() => setUpdateModalShow(true)}>Update values</Button>
-                <UpdateModal
-                  show={UpdatemodalShow}
-                  onHide={() => setUpdateModalShow(false)}
-                />
-              </ButtonGroup>
+          <>
+            <h5>Choose operation to be performed on Tables:</h5>
+            <ButtonGroup vertical>
+              <Button variant="warning" size="lg" onClick={() => setInsertModalShow(true)}>Insert values</Button>
+              <InsertModal
+                show={InsertmodalShow}
+                onHide={() => setInsertModalShow(false)}
+              />
+              <br></br>
+              <Button variant="warning" size="lg" onClick={() => setDeleteModalShow(true)}>Delete values</Button>
+              <DeleteModal
+                show={DeletemodalShow}
+                onHide={() => setDeleteModalShow(false)}
+              />
+              <br></br>
+              <Button variant="warning" size="lg" onClick={() => setUpdateModalShow(true)}>Update values</Button>
+              <UpdateModal
+                show={UpdatemodalShow}
+                onHide={() => setUpdateModalShow(false)}
+              />
+            </ButtonGroup>
 
 
 
-            </> : renderForm}
-        </div>
-      </div></>
+          </> : renderForm}
+      </div>
+    </>
   );
 };
 

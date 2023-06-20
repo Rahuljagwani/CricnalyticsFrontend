@@ -1,0 +1,6 @@
+.main-div {
+ border: 5px solid rgb(7, 34, 158);
+ border-radius: 5px;
+ box-shadow: 7px 5px 5px -3px rgba(3, 20, 248, 0.4), 0px 5px 10px rgba(3, 20, 248, 0.4), -7px 5px 5px -3px rgba(3, 20, 248, 0.4) !important;
+ background-color: #009edf;
+}

@@ -1,24 +1,14 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Landingpage from './Landingpage';
+import Admin from './Admin';
+import User from './User';
 
 function App() {
+  const [showAdmin, setShowAdmin] = useState(false);
+  const [showUser, setShowUser] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    showAdmin ? < Admin /> : (showUser ? < User /> : <Landingpage funShowUser = {setShowUser} funShowAdmin = {setShowAdmin} /> )
   );
 }
 
