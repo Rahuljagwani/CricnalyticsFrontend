@@ -53,7 +53,9 @@ function DeleteModal(props) {
       </Modal.Header>
       <Modal.Body>
         <label><h5>Choose Table:</h5></label>
-        <select id="select">
+        <select id="select" onChange={(event) => {
+          settableName(event.target.value);
+        }}>
           <option value="Batters"> Batters
           </option>
           <option value="Bowlers"> Bowlers
@@ -75,7 +77,9 @@ function DeleteModal(props) {
           setAttribute(e.target.value);
         }}></input>
 
-        <select id="selectop">
+        <select id="selectop" onChange={(event) => {
+          setoperator(event.target.value);
+        }}>
           <option value=">"> `{'>'}`
           </option>
           <option value="<">  `{'<'}`
