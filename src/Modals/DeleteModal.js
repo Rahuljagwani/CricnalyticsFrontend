@@ -6,16 +6,15 @@ import { useState } from 'react';
 function DeleteModal(props) {
 
 
-  const [tableName, settableName] = useState("");
+  const [tableName, settableName] = useState("Batters");
   const [attribute, setAttribute] = useState("");
   const [value, setValue] = useState("");
-  const [operator, setoperator] = useState("");
+  const [operator, setoperator] = useState(">");
 
 
 
     const deleteValues = () => {
-      settableName(document.getElementById("select").value);
-    setoperator(document.getElementById("selectop").value);
+      
 
 
       Axios.post("http://localhost:3001/api/delete", {

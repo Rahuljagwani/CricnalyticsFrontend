@@ -15,7 +15,7 @@ function InsertModal(props) {
     const [fours, setfours] = useState("");
     const [hundreds, sethundreds] = useState("");
     const [fifties, setfifties] = useState("");
-    const [tableName, settableName] = useState("");
+    const [tableName, settableName] = useState("Batters");
     const [bowlerid, setbowlerid] = useState("");
 
     const [type, settype] = useState("");
@@ -46,7 +46,6 @@ function InsertModal(props) {
 
 
     const insertTable = () => {
-        settableName(document.getElementById("select").value);
         document.getElementById("Batters").style.display = tableName==="Batters"?"block":"none";
         document.getElementById("Bowlers").style.display = tableName==="Bowlers"?"block":"none";
         document.getElementById("Players").style.display = tableName==="Players"?"block":"none";
@@ -120,7 +119,9 @@ function InsertModal(props) {
                 <Modal.Body>
 
                     <label><h5>Choose Table:</h5></label>
-                    <select id="select">
+                    <select id="select" onChange={(event) => {
+                            settableName(event.target.value);
+                    }} >
                         <option value="Batters"> Batters
                         </option>
                         <option value="Bowlers"> Bowlers
